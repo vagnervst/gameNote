@@ -1,4 +1,4 @@
-# gameNote
+# Game Note
 
 Practicing NodeJS, ExpressJS, AngularJS, and JSON
 
