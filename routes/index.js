@@ -3,8 +3,8 @@ var fs = require('fs');
 
 var conn = mysql.createConnection({
     host: 'localhost',
-    user: 'root',
-    password: 'root',
+    user: '*',
+    password: '*',
     database: 'gameNote'
 });
 
@@ -17,9 +17,33 @@ conn.connect(function(err) {
 });
 
 exports.home = function(req, res) {        
-    conn.query('SELECT * FROM games', function(err, rows, fields) {
+    conn.query('SELECT * FROM games', function(err, games, fields) {
         //Create a json file with all games stored on database
-        fs.writeFileSync('views/js/data.json', JSON.stringify(rows));
+        
+        conn.query('SELECT * FROM notes', function(err, notes, fields) {
+            
+            var json = [];
+            
+            games.forEach(function(game, index) {
+                var tempObj = {
+                    id: game.id,
+                    title: game.title,
+                    shortname: game.shortname,
+                    description: game.description,
+                    notes: new Array()
+                };
+                
+                for(var i = 0; i < notes.length; ++i) {
+                    if( notes[i].gameId === tempObj.id ) {
+                        tempObj.notes.push(notes[i].content);
+                    }
+                }
+                
+                json.push(tempObj);
+            });
+                        
+            fs.writeFileSync('views/js/data.json', JSON.stringify(json, null, 4));
+        });                
     });
     
     console.log('home request');

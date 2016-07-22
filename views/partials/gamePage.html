@@ -7,8 +7,9 @@
         <p>{{gamesList[gameId].description}}</p>
     </section>
     <div id="gameNotes">
+        <a href="#">+</a>
         <ul>
-            <li></li>
+            <li ng-repeat="note in gamesList[gameId].notes">{{note}} <a href="#">-</a></li>
         </ul>
     </div>
 </section>

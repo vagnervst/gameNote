@@ -29,6 +29,6 @@ var gnControllers = angular.module('gnControllers', [])
 .controller('GamePageController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
     $http.get('js/data.json').success(function(data) {
         $scope.gamesList = data;
-        $scope.gameId = $routeParams.gameId;
+        $scope.gameId = $routeParams.gameId;        
     });
 }]);
