@@ -1,10 +1,16 @@
 <section id="gamesPreview">
-    <a href="#/{{prevId}}">&lt;</a>
-    <a href="#/{{nextId}}">&gt;</a>
+    <div id="buttonsWrapper">
+        <a href="#/{{prevId}}" class="button">&lt;</a>
+        <a href="#/{{nextId}}" class="button">&gt;</a>
+    </div>
     <ul>
         <li>
-            <a href="/game/{{gamedbId}}"><img ng-src="img/{{gamesList[gameId].shortname}}_tn.jpg"/></a>
-            <a href="/game/{{gamedbId}}"><h2>{{ gamesList[gameId].title }}</h2></a>
+            <div id="gameCoverBox">
+                <a href="/game/{{gamedbId}}"><img id="gameCover" ng-src="img/{{gamesList[gameId].shortname}}_tn.jpg"/></a>
+            </div>
+            <div id="gameInfoBox">
+                <h2 id="gameTitle"><a href="/game/{{gamedbId}}">{{ gamesList[gameId].title }}</a></h2>
+            </div>
         </li>
     </ul>
 </section>

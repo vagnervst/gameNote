@@ -2,10 +2,12 @@
     <head>
         <title>Game Note</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/style.css"/>        
+        <link rel="stylesheet" href="../css/gamePageStyle.css"/>   
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <div id="container">
+            <a id="bckButton" href="/">&lt;&lt;</a>
             <section id="gamePage">
                 <div id="gameImage">
                     <img src="../img/<%= jsonData[gameId-1].shortname %>.jpg"/>
@@ -13,19 +15,9 @@
                 <section id="gameInfo">
                     <h2><%= jsonData[gameId-1].title %></h2>
                     <p><%= jsonData[gameId-1].description %></p>
-                </section>
-                <div id="gameNotes">                    
-                    <form method="post" action="/addNote/<%= jsonData[gameId-1].id %>">
-                        <input type="text" name="content"/>
-                        <input type="submit" name="submit" value="+"/>
-                    </form>
-                    <ul>
-                        <% for(var i = 0; i < notes.length; ++i) {%>
-                        <li><%= notes[i].content %> <a href="/removeNote/<%= gameId %>/<%= notes[i].id %>">-</a></li>
-                        <% } %>
-                    </ul>
-                </div>
+                </section>                
             </section>
+            <% include partials/notesList.ejs %>
         </div>
     </body>
 </html>

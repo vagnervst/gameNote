@@ -1,0 +1,90 @@
+body {
+    background-color: hsl(0, 0%, 6%);
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+#container {    
+    background-color: #1a1a1a;
+    width: 650px;
+    height: 565px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 0 0 2px 2px;
+    box-shadow: -5px 5px 5px hsl(0, 0%, 3%);    
+}
+
+#gamesPreview {
+   
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#buttonsWrapper {
+    background-color: #c7c7c7;
+    width: 100%;
+    border-radius: 5px 5px 0 0;    
+}
+
+.button {
+    background-color: hsl(219, 23%, 35%);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    text-align: center;    
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    box-shadow: inset -2px -2px 0 hsl(219, 30%, 24%);
+    margin: 5px 0 5px 5px;
+}
+
+.button:hover {
+    background-color: hsl(219, 24%, 44%);
+}
+
+#container ul {    
+    margin: 0;
+    padding: 0;
+    list-style-type: none;    
+}
+
+#container ul li {
+    display: flex;
+    flex-direction: row;
+}
+
+#gameCoverBox {
+    width: 100%;
+    display: flex;
+}
+
+#gameCover {
+    width: 400px;
+    height: 500px;    
+}
+
+#gameInfoBox {
+    background-color: hsl(0, 83%, 62%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+#gameTitle {
+    width: 150px;
+    height: 70px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}

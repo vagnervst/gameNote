@@ -1,0 +1,12 @@
+<div id="gameNotes">                    
+    <form method="post" action="/addNote/<%= jsonData[gameId-1].id %>">
+        <label for="noteInput">New note: </label>
+        <input type="text" name="content" id="noteInput" placeholder="Enter note text."/>
+        <input type="submit" name="submit" value="+" id="submitButton"/>
+    </form>
+    <ul>
+        <% for(var i = 0; i < notes.length; ++i) {%>
+        <li><a class="rmButton" href="/removeNote/<%= gameId %>/<%= notes[i].id %>">-</a><%= notes[i].content %></li>
+        <% } %>
+    </ul>
+</div>

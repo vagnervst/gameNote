@@ -1,0 +1,111 @@
+body {
+    background-color: #101010;
+    font-family: 'Roboto', sans-serif;
+}
+
+#bckButton {
+    background-color: hsl(219, 23%, 35%);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    text-align: center;    
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    box-shadow: inset -2px -2px 0 hsl(219, 30%, 24%);
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+#bckButton:hover {
+    background-color: hsl(219, 24%, 44%);
+}
+
+#container {
+    background-color: #191919;
+    display: flex;        
+    flex-direction: column;
+    padding: 10px;
+}
+
+#gamePage {
+    display: flex;
+    flex-direction: row;
+}
+
+#gameImage {
+    display: flex;
+    background-color: #d92f2f;    
+    padding: 10px;
+}
+
+#gameImage img {
+    width: 500px;
+    height: 400px;
+}
+
+#gameInfo {
+    background-color: #24313e;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+#gameNotes {
+    display: flex;    
+    flex-direction: column;
+    background-color: #0d1e2f;
+    padding: 10px;  
+    color: white;
+}
+
+#gameNotes ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#gameNotes ul li {
+    background-color: #efefef; 
+    display: flex;    
+    align-items: center;
+    height: 45px;        
+    margin-bottom: 10px;
+    color: black;
+    border-radius: 15px 0 0 15px;
+}
+
+#submitButton {
+    width: 50px;
+    height: 30px;    
+}
+
+#noteInput {
+    height: 30px;
+}
+
+.rmButton {
+    background-color: #ce2828;    
+    width: 50px;
+    height: 100%;
+    color: wheat;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: bold;    
+    text-align: center;
+    margin-right: 10px;
+    transition: all .2s;
+    border-radius: 5px 0 0 5px;
+}
+
+.rmButton:hover {
+    background-color: #0a0a0a;
+    color: white;
+}
