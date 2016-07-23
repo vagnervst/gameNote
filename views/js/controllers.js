@@ -5,6 +5,7 @@ var gnControllers = angular.module('gnControllers', [])
         $scope.gamesList = data;
         $scope.title = 'Home'; 
         $scope.gameId = $routeParams.gameId;
+        $scope.gamedbId = Number($scope.gameId)+1;
         
         var nextId = 0;
         var prevId = 0;

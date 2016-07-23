@@ -3,38 +3,12 @@
         "id": 1,
         "title": "No Man's Sky",
         "shortname": "no_mans_sky",
-        "description": "Procedural space exploration game",
-        "notes": [
-            "one note",
-            "new note",
-            "new note 2",
-            "qwe",
-            "ffff",
-            "NOTE NOTE",
-            "qwee",
-            "NOTE NOTE 2",
-            "feretqwe",
-            "qqqqqqqqqqqqqqqq",
-            "eeeeeeeeee",
-            "NEW NMS NOTE",
-            "NEW NMS NOTE 2",
-            "NEW NMS NOTE 3"
-        ]
+        "description": "Procedural space exploration game"
     },
     {
         "id": 2,
         "title": "The Elder Scrolls V: Skyrim",
         "shortname": "elder_scrolls_v_skyrim",
-        "description": "An RPG from Bethesda",
-        "notes": [
-            "Mage rules",
-            "qwe",
-            "f",
-            "qwe",
-            "eeeeeee",
-            "what in oblivion is that?!",
-            "fffff",
-            "ggggg"
-        ]
+        "description": "An RPG from Bethesda"
     }
 ]
