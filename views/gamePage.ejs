@@ -21,7 +21,7 @@
                     </form>
                     <ul>
                         <% for(var i = 0; i < notes.length; ++i) {%>
-                        <li><%= notes[i].content %> <a href="#">-</a></li>
+                        <li><%= notes[i].content %> <a href="/removeNote/<%= gameId %>/<%= notes[i].id %>">-</a></li>
                         <% } %>
                     </ul>
                 </div>

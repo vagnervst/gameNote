@@ -26,7 +26,7 @@ function createJSON() {
 }
 
 function getNotes(gameId, callback) {
-    conn.query('SELECT content FROM notes WHERE gameId = ' + gameId, function(err, rows, fields) {
+    conn.query('SELECT id, content FROM notes WHERE gameId = ' + gameId, function(err, rows, fields) {
         callback(rows);
     });
     
@@ -58,4 +58,14 @@ exports.addNote = function(req, res) {
     conn.query(query, function(err, rows, fields) {
         res.redirect('/game/' + gameId);
     });        
+};
+
+exports.rmNote = function(req, res) {
+    var gameId = req.params.gameId;
+    var noteId = req.params.noteId;
+    
+    var query = 'DELETE FROM notes WHERE id = ' + noteId;
+    conn.query(query, function(err, rows, fields){
+        res.redirect('/game/' + gameId);
+    });
 };

@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', routes.home);
 app.get('/game/:gameId', routes.gamePage);
 app.post('/addNote/:gameId', routes.addNote);
+app.get('/removeNote/:gameId/:noteId', routes.rmNote);
 
 app.listen(3000, function() {
     console.log('Listening on port 3000...');
