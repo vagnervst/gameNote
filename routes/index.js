@@ -69,3 +69,20 @@ exports.rmNote = function(req, res) {
         res.redirect('/game/' + gameId);
     });
 };
+
+exports.addGame = function(req, res) {
+    if( typeof(req.body.submit) !== 'undefined' ) {
+        var gameTitle = req.body.gameTitle;
+        var gameDescr = req.body.gameDescription;
+        
+        console.log('body: ' + req.files);
+        
+        var query = 'INSERT INTO games(title, description) VALUES(\'' + gameTitle + '\', \'' + gameDescr + '\')';
+        //console.log(query);
+        /*conn.query(query, function(err, rows, fields) {
+            res.render('addGame');
+        });*/        
+    } else {
+        res.render('addGame');
+    }
+};

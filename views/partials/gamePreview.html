@@ -2,14 +2,20 @@
     <div id="buttonsWrapper">
         <a href="#/{{prevId}}" class="button">&lt;</a>
         <a href="#/{{nextId}}" class="button">&gt;</a>
+        <a href="/addGame" class="button">+</a>
+        <a href="#" class="button">-</a>                
     </div>
     <ul>
         <li>
             <div id="gameCoverBox">
-                <a href="/game/{{gamedbId}}"><img id="gameCover" ng-src="img/{{gamesList[gameId].shortname}}_tn.jpg"/></a>
+                <a href="/game/{{gamedbId}}">
+                    <img id="gameCover" ng-src="img/{{gamesList[gameId].shortname}}_tn.jpg"/>
+                </a>
             </div>
             <div id="gameInfoBox">
-                <h2 id="gameTitle"><a href="/game/{{gamedbId}}">{{ gamesList[gameId].title }}</a></h2>
+                <h2 id="gameTitle">
+                    <a href="/game/{{gamedbId}}">{{ gamesList[gameId].title }}</a>
+                </h2>
             </div>
         </li>
     </ul>

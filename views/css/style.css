@@ -4,6 +4,7 @@ body {
     margin: 0;
     overflow-y: hidden;
     font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
 #container {    
@@ -26,9 +27,10 @@ a {
 }
 
 #buttonsWrapper {
-    background-color: #c7c7c7;
-    width: 100%;
-    border-radius: 5px 5px 0 0;    
+    background-color: #c7c7c7; 
+    display: flex;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
 }
 
 .button {
@@ -46,6 +48,10 @@ a {
     border-radius: 10px;
     box-shadow: inset -2px -2px 0 hsl(219, 30%, 24%);
     margin: 5px 0 5px 5px;
+}
+
+.button:last-child {
+    margin-left: auto;
 }
 
 .button:hover {
@@ -87,4 +93,41 @@ a {
     color: white;
     text-align: center;
     text-decoration: none;
+}
+
+#addGameForm {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 auto;    
+    background-color: hsl(0, 0%, 67%);
+    width: 500px;
+    height: 600px;
+    padding: 10px;
+    color: black;
+}
+
+#addGameForm h1 {
+    font-size: 30px;
+    padding-bottom: 20px;
+    box-shadow: 0 5px 0 black;
+}
+
+#addGameForm form {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    padding: 0;
+    margin: 0;
+}
+
+#addGameForm form label {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#addGameForm form * {
+    margin-bottom: 10px;
 }

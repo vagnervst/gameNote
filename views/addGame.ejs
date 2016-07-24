@@ -1,0 +1,28 @@
+<html ng-app="gNote">
+    <head>
+        <title>Game Note</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.7/angular-route.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+    </head>
+    <body>
+        <section id="addGameForm">
+            <h1>Add new game</h1>
+            <form method="post" action="/addGame">        
+                <label for="formtitle">Title</label>
+                    <input type="text" name="gameTitle" placeholder="Insert game name" id="formtitle">
+                <label for="formdesc">Description</label>
+                <textarea type="text" name="gameDescription" placeholder="Insert game description" cols="30" rows="10" id="formdesc"></textarea>
+                <label style="font-size: 15px;">Game cover: </label>
+                    <input type="file" name="gameCover" accept=".jpg,.png">
+                <label style="font-size: 15px;">Game image: </label>
+                    <input type="file" name="gameImage" accept=".jpg,.png">
+                <input type="submit" name="submit">
+            </form>
+        </section>
+    </body>
+</html>
